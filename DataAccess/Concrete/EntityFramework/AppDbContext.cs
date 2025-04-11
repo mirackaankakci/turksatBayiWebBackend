@@ -13,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // SQL Server connection (LocalDB instance)  
-            optionsBuilder.UseSqlServer(@"Server=turksat-mssql;Database=CampaignDb;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer(@"Server=mssql;Database=CampaignDb;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
         public DbSet<Campaign> Campaigns { get; set; }
