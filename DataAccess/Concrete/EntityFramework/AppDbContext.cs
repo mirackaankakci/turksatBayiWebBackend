@@ -13,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // SQL Server connection (LocalDB instance)  
-            optionsBuilder.UseSqlServer(@"Server=mssql;Database=CampaignDb;User Id=sa;Password=MyPass123!");
+            optionsBuilder.UseSqlServer(@"Server=mssql;Database=CampaignDb;User Id=sa;Password=MyPass123!;TrustServerCertificate=True;Encrypt=False");
         }
 
         public DbSet<Campaign> Campaigns { get; set; }
